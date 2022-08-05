@@ -55,6 +55,7 @@ public class InstagramStoriesShare extends SingleShareIntent {
         }
 
         Activity activity = this.reactContext.getCurrentActivity();
+        this.intent.putExtra("source_application", "com.nglreactnative");
 
         if (activity == null) {
             TargetChosenReceiver.sendCallback(false, "Something went wrong");
